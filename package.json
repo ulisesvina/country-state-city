@@ -1,36 +1,7 @@
 {
-	"name": "country-state-city",
-	"version": "3.2.1",
+	"name": "@ulisesv/regional-list-patched",
+	"version": "1.0.1",
 	"description": "Library for fetching Country, its States and Cities",
-	"main": "./lib/cjs/index.js",
-	"module": "./lib/index.js",
-	"types": "./lib/index.d.ts",
-	"sideEffects": false,
-	"scripts": {
-		"test": "jest",
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run minify",
-		"prepublish": "npm run build",
-		"lint": "eslint index.ts __test__ --fix",
-		"minify": "ts-node src/scripts/minify.ts",
-		"split-data":"ts-node src/scripts/splitLargeDatasetFiles-CSC.ts",
-		"update-data":"ts-node src/scripts/combineSplitFilesToMakeALargeDatasetFiles-CSC.ts",
-		"update-data-with-gz":"gz=true ts-node src/scripts/combineSplitFilesToMakeALargeDatasetFiles-CSC.ts"
-	},
-	"author": "harpreetkhalsagtbit@gmail.com",
-	"license": "GPL-3.0",
-	"directories": {
-		"lib": "lib"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/harpreetkhalsagtbit/country-state-city.git"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm test",
-			"pre-push": "npm test"
-		}
-	},
 	"keywords": [
 		"Country",
 		"State",
@@ -39,10 +10,35 @@
 		"Search",
 		"Filter"
 	],
+	"homepage": "https://github.com/harpreetkhalsagtbit/country-state-city#readme",
 	"bugs": {
 		"url": "https://github.com/harpreetkhalsagtbit/country-state-city/issues"
 	},
-	"homepage": "https://github.com/harpreetkhalsagtbit/country-state-city#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/harpreetkhalsagtbit/country-state-city.git"
+	},
+	"license": "GPL-3.0",
+	"author": "harpreetkhalsagtbit@gmail.com",
+	"type": "commonjs",
+	"main": "./lib/cjs/index.js",
+	"types": "./lib/index.d.ts",
+	"directories": {
+		"lib": "lib"
+	},
+	"files": [
+		"lib/"
+	],
+	"scripts": {
+		"test": "jest",
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig-cjs.json && npm run minify",
+		"prepublish": "npm run build",
+		"lint": "eslint index.ts __test__ --fix",
+		"minify": "ts-node src/scripts/minify.ts",
+		"split-data": "ts-node src/scripts/splitLargeDatasetFiles-CSC.ts",
+		"update-data": "ts-node src/scripts/combineSplitFilesToMakeALargeDatasetFiles-CSC.ts",
+		"update-data-with-gz": "gz=true ts-node src/scripts/combineSplitFilesToMakeALargeDatasetFiles-CSC.ts"
+	},
 	"devDependencies": {
 		"@types/jest": "^26.0.24",
 		"@types/node": "^16.18.11",
@@ -61,9 +57,14 @@
 		"ts-node": "^10.9.1",
 		"typescript": "^4.9.4"
 	},
-	"files": [
-		"lib/"
-	],
+	"module": "./lib/index.js",
+	"sideEffects": false,
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm test",
+			"pre-push": "npm test"
+		}
+	},
 	"jest": {
 		"moduleFileExtensions": [
 			"js",
