@@ -1,6 +1,6 @@
 {
 	"name": "@ulisesv/regional-list-patched",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "Library for fetching Country, its States and Cities",
 	"keywords": [
 		"Country",
@@ -27,12 +27,12 @@
 		"lib": "lib"
 	},
 	"files": [
-  		"src",
-  		"data",
-  		"dataUpdateGuide.md",
-  		"jest.config.ts",
-  		"tsconfig.json",
-  		"tsconfig-cjs.json"
+		"src",
+		"data",
+		"dataUpdateGuide.md",
+		"jest.config.ts",
+		"tsconfig.json",
+		"tsconfig-cjs.json"
 	],
 	"scripts": {
 		"test": "jest",
