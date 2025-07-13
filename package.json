@@ -27,7 +27,12 @@
 		"lib": "lib"
 	},
 	"files": [
-		"lib/"
+  		"src",
+  		"data",
+  		"dataUpdateGuide.md",
+  		"jest.config.ts",
+  		"tsconfig.json",
+  		"tsconfig-cjs.json"
 	],
 	"scripts": {
 		"test": "jest",
